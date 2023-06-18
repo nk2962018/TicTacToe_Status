@@ -9,7 +9,7 @@ const TicTacToe = () => {
 
   const handleClick = (i) =>{
     const updateBoard = [...board];
-    updateBoard[i] =  Constants.Player_X ;
+    updateBoard[0] =  Constants.Player_X ;
     setBoard(updateBoard);
   }
 

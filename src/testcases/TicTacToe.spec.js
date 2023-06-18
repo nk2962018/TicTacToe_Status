@@ -27,4 +27,14 @@ describe("TicTacToe works fine when", ()=> {
     expect(board).toBeInTheDocument();
   });
 
+  it("should mark the first clicked tile as X and rest should remain empty", () => {
+    const tiles = screen.getAllByTestId("tile");
+    const [firstTile, ...remainingTiles] = tiles;
+    fireEvent.click(firstTile);
+    expect(firstTile).toHaveTextContent(ConstantsTest.Player_X);
+    remainingTiles.forEach((tile) => {
+      expect(tile.textContent).toBe(ConstantsTest.EMPTY);
+    })
+  });
+
 });
