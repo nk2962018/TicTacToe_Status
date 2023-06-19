@@ -52,5 +52,11 @@ describe("TicTacToe game works fine when" , () => {
     checkTileSymbolOnClicking(firstTile,ConstantsTest.Player_X);
     checkSymbol(remainingTiles,ConstantsTest.EMPTY);
   });
-  
+
+  it("should mark all the clicked tile as X once all the tiles are clicked", () => {
+    tiles.forEach((tile) => {
+      checkTileSymbolOnClicking(tile,ConstantsTest.Player_X);
+    });
+  });
+
 });

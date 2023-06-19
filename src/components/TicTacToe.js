@@ -7,9 +7,9 @@ const TicTacToe = () => {
 
   const [board, setBoard] = useState(Array(Constants.NO_OF_TILES_IN_THE_BOARD).fill(Constants.EMPTY));
 
-  const handleClick = (i) =>{
+  const handleClick = (position) =>{
     const updateBoard = [...board];
-    updateBoard[0] =  Constants.Player_X ;
+    updateBoard[position] =  Constants.Player_X ;
     setBoard(updateBoard);
   }
 
