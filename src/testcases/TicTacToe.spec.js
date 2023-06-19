@@ -27,14 +27,30 @@ describe("TicTacToe works fine when", ()=> {
     expect(board).toBeInTheDocument();
   });
 
-  it("should mark the first clicked tile as X and rest should remain empty", () => {
-    const tiles = screen.getAllByTestId("tile");
-    const [firstTile, ...remainingTiles] = tiles;
-    fireEvent.click(firstTile);
-    expect(firstTile).toHaveTextContent(ConstantsTest.Player_X);
-    remainingTiles.forEach((tile) => {
-      expect(tile.textContent).toBe(ConstantsTest.EMPTY);
-    })
+});
+
+describe("TicTacToe game works fine when" , () => {
+  let tiles;
+  beforeEach(() => {
+    render(<TicTacToe/>)
+    tiles = screen.getAllByTestId('tile');
   });
 
+  const checkTileSymbolOnClicking = (tile, expectedSymbol) => {
+    fireEvent.click(tile);
+    expect(tile.textContent).toBe(expectedSymbol);
+  };
+
+  const checkSymbol = (tiles, expectedSymbol) => {
+    tiles.forEach((tile) => {
+      expect(tile.textContent).toBe(expectedSymbol);
+    });
+  };
+
+  it("should mark the first clicked tile as X and rest should remain empty", () => {
+    const [firstTile, ...remainingTiles] = tiles;
+    checkTileSymbolOnClicking(firstTile,ConstantsTest.Player_X);
+    checkSymbol(remainingTiles,ConstantsTest.EMPTY);
+  });
+  
 });
