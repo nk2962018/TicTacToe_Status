@@ -10,6 +10,7 @@ const TicTacToe = () => {
 
   const handleClick = (position) =>{
     const updateBoard = [...board];
+    if(updateBoard[position]) return;
     updateBoard[position] = isNextX ? Constants.Player_X : Constants.Player_O;
     setBoard(updateBoard);
     setIsNextX(!isNextX); 
