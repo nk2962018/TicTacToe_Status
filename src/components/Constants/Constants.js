@@ -3,5 +3,6 @@ export const Constants = {
     NO_OF_TILES_IN_THE_BOARD : 9,
     EMPTY : "",
     Player_X : "X",
+    Player_O : "O"
     
 }

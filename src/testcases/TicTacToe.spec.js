@@ -59,4 +59,12 @@ describe("TicTacToe game works fine when" , () => {
     });
   });
 
+  test("should display X and O on clicking alternate tiles", () => {
+    const [firstLeftTile, firstMiddleTile, ...remainingTiles] = tiles;
+    checkTileSymbolOnClicking(firstLeftTile, ConstantsTest.Player_X);
+    checkTileSymbolOnClicking(firstMiddleTile, ConstantsTest.Player_O);
+    checkSymbol(remainingTiles, ConstantsTest.EMPTY);
+  });
+
 });
+

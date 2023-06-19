@@ -6,11 +6,13 @@ import Board from "./Board";
 const TicTacToe = () => {
 
   const [board, setBoard] = useState(Array(Constants.NO_OF_TILES_IN_THE_BOARD).fill(Constants.EMPTY));
+  const [isNextX , setIsNextX] = useState(true);
 
   const handleClick = (position) =>{
     const updateBoard = [...board];
-    updateBoard[position] =  Constants.Player_X ;
+    updateBoard[position] = isNextX ? Constants.Player_X : Constants.Player_O;
     setBoard(updateBoard);
+    setIsNextX(!isNextX); 
   }
 
   return (
