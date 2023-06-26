@@ -5,7 +5,7 @@ export const Constants = {
     Player_X : "X",
     Player_O : "O",
     NEXT_PLAYER_TURN_MESSAGE : 'Next Player : ',
-    DECLARE_WINNER_MESSAGE : 'The winner is : ',
+    DECLARE_WINNER_MESSAGE : 'The Winner is : ',
     RESET_BUTTON_TEXT : 'Play Again',
     MATCH_DRAW_MESSAGE : 'Match Draw',
     FIRST_ROW_WINNING_POSITION  :  [0,1,2],
