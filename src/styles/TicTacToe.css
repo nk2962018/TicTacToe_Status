@@ -1,3 +1,24 @@
 .container{
     text-align: center;
+    background-color:DeepSkyBlue;
+    width:400px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.title{
+    color:white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.reset{
+    background-color: orangered;
+    padding: 13px;
+    width: 224px;
+    border: 1px solid orangered;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
 }

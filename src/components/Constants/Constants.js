@@ -2,8 +2,8 @@ export const Constants = {
     TITLE : "Tic Tac Toe Game",
     NO_OF_TILES_IN_THE_BOARD : 9,
     EMPTY : "",
-    Player_X : "X",
-    Player_O : "O",
+    PLAYER_X : "X",
+    PLAYER_O : "O",
     NEXT_PLAYER_TURN_MESSAGE : 'Next Player : ',
     DECLARE_WINNER_MESSAGE : 'The Winner is : ',
     RESET_BUTTON_TEXT : 'Play Again',
@@ -19,19 +19,14 @@ export const Constants = {
 
 }
 
-export const rowWinningPositions = [
-    Constants.FIRST_ROW_WINNING_POSITION,
-    Constants.SECOND_ROW_WINNING_POSITION,
-    Constants.THIRD_ROW_WINNING_POSITION
-]
+export const WINNING_COMBINATIONS = [
+    Constants.FIRST_ROW_WINNING_POSITION  ,
+    Constants.SECOND_ROW_WINNING_POSITION ,
+    Constants.THIRD_ROW_WINNING_POSITION  ,
+    Constants.FIRST_COL_WINNING_POSITION  ,
+    Constants.SECOND_COL_WINNING_POSITION ,
+    Constants.THIRD_COL_WINNING_POSITION  ,
+    Constants.TOP_LEFT_BOTTOM_RIGHT_DIAGONAL_WINNING_POSITION ,
+    Constants.TOP_RIGHT_BOTTOM_LEFT_DIAGONAL_WINNING_POSITION 
+];
 
-export const columnWinningPositions = [
-    Constants.FIRST_COL_WINNING_POSITION,
-    Constants.SECOND_COL_WINNING_POSITION,
-    Constants.THIRD_COL_WINNING_POSITION
-]
-
-export const diagonalWinningPositions = [
-    Constants.TOP_LEFT_BOTTOM_RIGHT_DIAGONAL_WINNING_POSITION,
-    Constants.TOP_RIGHT_BOTTOM_LEFT_DIAGONAL_WINNING_POSITION
-]
